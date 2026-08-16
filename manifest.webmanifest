@@ -1,0 +1,17 @@
+{
+  "name": "Probably — Probabilistic Data Structures",
+  "short_name": "Probably",
+  "description": "An interactive explorer for Bloom Filters, HyperLogLog, and Count-Min Sketch.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#08090b",
+  "theme_color": "#08090b",
+  "icons": [
+    {
+      "src": "./assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "probably",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An interactive explorer for probabilistic data structures.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "find js scripts -name '*.js' -o -name '*.mjs' 2>/dev/null | sort | xargs -r -n1 node --check",
+    "build": "node scripts/build-site.mjs",
+    "serve": "python3 -m http.server 4173",
+    "qa:browser": "node scripts/browser-qa.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title description">
+  <title id="title">Probably interactive probabilistic data structures explorer</title>
+  <desc id="description">A dark browser interface showing the Probably hero, a live data stream, memory savings, and links to Bloom Filter, HyperLogLog, and Count-Min Sketch experiments.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#07080a"/>
+      <stop offset="1" stop-color="#0b0d11"/>
+    </linearGradient>
+    <linearGradient id="stream" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#ad71ff" stop-opacity="0"/>
+      <stop offset=".45" stop-color="#ad71ff" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#b9f34a" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#ad71ff" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#ad71ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#d5e7ef" stroke-opacity=".055"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000" flood-opacity=".55"/>
+    </filter>
+    <filter id="limeGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1198" height="758" rx="27" fill="none" stroke="#d5e7ef" stroke-opacity=".13"/>
+  <circle cx="930" cy="170" r="330" fill="url(#glow)"/>
+
+  <g font-family="Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <rect x="0" y="0" width="220" height="760" rx="28" fill="#08090b" fill-opacity=".94"/>
+    <path d="M220 0V760" stroke="#d5e7ef" stroke-opacity=".12"/>
+
+    <g transform="translate(30 34)">
+      <g fill="#b9f34a" filter="url(#limeGlow)">
+        <circle cx="5" cy="5" r="4"/><circle cx="18" cy="5" r="4"/><circle cx="31" cy="5" r="4"/>
+        <circle cx="5" cy="18" r="4"/><circle cx="18" cy="18" r="4" opacity=".28"/><circle cx="31" cy="18" r="4"/>
+        <circle cx="5" cy="31" r="4"/><circle cx="18" cy="31" r="4"/><circle cx="31" cy="31" r="4" opacity=".28"/>
+      </g>
+      <text x="47" y="26" fill="#f2f3ed" font-size="25" font-weight="650" letter-spacing="-1.3">Probably</text>
+      <text x="47" y="51" fill="#727985" font-size="10">Remember more. Store less.</text>
+    </g>
+
+    <g font-family="SFMono-Regular,Consolas,monospace" font-size="10">
+      <g transform="translate(22 135)">
+        <rect width="176" height="44" rx="8" fill="#fff" fill-opacity=".04" stroke="#d5e7ef" stroke-opacity=".13"/>
+        <rect x="0" y="8" width="2" height="28" rx="1" fill="#b9f34a"/>
+        <text x="14" y="27" fill="#b9f34a">00</text><text x="45" y="27" fill="#f2f3ed">Overview</text>
+      </g>
+      <g fill="#8e949e">
+        <text x="36" y="220">01</text><text x="67" y="220">Bloom Filter</text>
+        <text x="36" y="264">02</text><text x="67" y="264">HyperLogLog</text>
+        <text x="36" y="308">03</text><text x="67" y="308">Count-Min Sketch</text>
+        <text x="36" y="352">04</text><text x="67" y="352">Under the hood</text>
+      </g>
+    </g>
+
+    <g transform="translate(22 610)">
+      <rect width="176" height="76" rx="9" fill="#fff" fill-opacity=".018" stroke="#d5e7ef" stroke-opacity=".12"/>
+      <circle cx="18" cy="22" r="4" fill="#b9f34a"/>
+      <text x="31" y="25" fill="#f2f3ed" font-size="10" font-weight="600">Local by design.</text>
+      <text x="18" y="47" fill="#727985" font-size="9">Your data never leaves</text>
+      <text x="18" y="61" fill="#727985" font-size="9">this browser tab.</text>
+    </g>
+
+    <rect x="220" y="0" width="980" height="72" fill="#08090b" fill-opacity=".72"/>
+    <path d="M220 72H1200" stroke="#d5e7ef" stroke-opacity=".12"/>
+    <g transform="translate(525 18)" font-family="SFMono-Regular,Consolas,monospace">
+      <text y="12" fill="#747b86" font-size="9" letter-spacing="1.2">MEMORY BUDGET</text>
+      <text x="385" y="12" fill="#b9f34a" font-size="12" font-weight="700">4 KB</text>
+      <path d="M0 34H420" stroke="#b9f34a" stroke-opacity=".25"/>
+      <path d="M0 34H222" stroke="#b9f34a" stroke-opacity=".85"/>
+      <g fill="#b9f34a" opacity=".38">
+        <circle cx="0" cy="34" r="1.5"/><circle cx="52" cy="34" r="1.5"/><circle cx="104" cy="34" r="1.5"/><circle cx="156" cy="34" r="1.5"/><circle cx="208" cy="34" r="1.5"/><circle cx="260" cy="34" r="1.5"/><circle cx="312" cy="34" r="1.5"/><circle cx="364" cy="34" r="1.5"/><circle cx="420" cy="34" r="1.5"/>
+      </g>
+      <circle cx="222" cy="34" r="7" fill="#b9f34a" stroke="#dfff92" stroke-width="2" filter="url(#limeGlow)"/>
+      <text y="54" fill="#565d68" font-size="8">256 B</text><text x="390" y="54" fill="#565d68" font-size="8">64 KB</text>
+    </g>
+
+    <g transform="translate(274 155)">
+      <text fill="#8d939d" font-family="SFMono-Regular,Consolas,monospace" font-size="10" letter-spacing="1">HOW CAN A FEW KILOBYTES REMEMBER MILLIONS OF THINGS?</text>
+      <text y="80" fill="#f2f3ed" font-size="58" font-weight="540" letter-spacing="-3.8">Remember more.</text>
+      <text y="138" fill="#f2f3ed" font-size="58" font-weight="540" letter-spacing="-3.8">Store less.</text>
+      <text y="196" fill="#b9f34a" font-size="58" font-weight="560" letter-spacing="-3.8">Be probably right.</text>
+      <text y="244" fill="#a2a7af" font-size="15">Three data structures trade certainty for extraordinary</text>
+      <text y="268" fill="#a2a7af" font-size="15">scale — running live in your browser.</text>
+      <rect y="306" width="166" height="46" rx="8" fill="#b9f34a"/>
+      <text x="19" y="335" fill="#08090b" font-size="12" font-weight="650">Run the experiment  →</text>
+      <text x="195" y="335" fill="#8f959f" font-size="11">View source</text>
+
+      <g transform="translate(0 405)" font-family="SFMono-Regular,Consolas,monospace">
+        <path d="M0 0H410" stroke="#d5e7ef" stroke-opacity=".12"/>
+        <text y="25" fill="#59606c" font-size="8">STRUCTURES</text><text y="43" fill="#c7cbd1" font-size="11">03</text>
+        <path d="M122 12V52" stroke="#d5e7ef" stroke-opacity=".12"/>
+        <text x="145" y="25" fill="#59606c" font-size="8">RUNTIME</text><text x="145" y="43" fill="#c7cbd1" font-size="11">BROWSER</text>
+        <path d="M282 12V52" stroke="#d5e7ef" stroke-opacity=".12"/>
+        <text x="305" y="25" fill="#59606c" font-size="8">DATA SENT</text><text x="305" y="43" fill="#c7cbd1" font-size="11">0 BYTES</text>
+      </g>
+    </g>
+
+    <g transform="translate(742 128)" filter="url(#shadow)">
+      <rect width="402" height="504" rx="20" fill="#090b0e" fill-opacity=".88" stroke="#d5e7ef" stroke-opacity=".14"/>
+      <rect x="1" y="1" width="400" height="502" rx="19" fill="url(#grid)" opacity=".7"/>
+      <text x="24" y="34" fill="#8b919b" font-family="SFMono-Regular,Consolas,monospace" font-size="9" letter-spacing="1">●  LIVE STREAM</text>
+      <text x="294" y="34" fill="#8b919b" font-family="SFMono-Regular,Consolas,monospace" font-size="9">248,614 EVENTS</text>
+
+      <path d="M18 126C102 90 159 121 220 102S332 82 388 111" fill="none" stroke="url(#stream)" stroke-width="1.2"/>
+      <path d="M16 206C97 245 158 204 222 224S337 248 389 215" fill="none" stroke="url(#stream)" stroke-width="1.2"/>
+      <g fill="#ad71ff">
+        <circle cx="42" cy="205" r="2"/><circle cx="78" cy="219" r="1.3"/><circle cx="120" cy="222" r="2.2"/><circle cx="158" cy="210" r="1.2"/><circle cx="191" cy="216" r="2"/><circle cx="238" cy="228" r="1.3"/>
+      </g>
+      <g fill="#b9f34a">
+        <circle cx="55" cy="117" r="1.6"/><circle cx="91" cy="105" r="2"/><circle cx="134" cy="108" r="1.2"/><circle cx="171" cy="114" r="2"/><circle cx="225" cy="100" r="1.4"/><circle cx="273" cy="94" r="2.1"/><circle cx="321" cy="93" r="1.2"/>
+      </g>
+
+      <g transform="translate(24 78)">
+        <rect width="214" height="172" rx="12" fill="#0d1014" stroke="#d5e7ef" stroke-opacity=".13"/>
+        <text x="14" y="25" fill="#838a95" font-family="SFMono-Regular,Consolas,monospace" font-size="8">EXACT</text>
+        <rect x="14" y="42" width="186" height="112" fill="url(#grid)" stroke="#d5e7ef" stroke-opacity=".08"/>
+      </g>
+      <g transform="translate(256 118)">
+        <rect width="122" height="132" rx="12" fill="#0d1014" stroke="#b9f34a" stroke-opacity=".3"/>
+        <text x="12" y="24" fill="#838a95" font-family="SFMono-Regular,Consolas,monospace" font-size="8">PROBABLY</text>
+        <rect x="12" y="40" width="98" height="76" fill="url(#grid)" stroke="#b9f34a" stroke-opacity=".16"/>
+        <circle cx="43" cy="66" r="4" fill="#b9f34a" filter="url(#limeGlow)"/>
+        <circle cx="78" cy="91" r="4" fill="#ad71ff"/>
+      </g>
+
+      <g transform="translate(24 333)" font-family="SFMono-Regular,Consolas,monospace">
+        <rect width="354" height="142" rx="12" fill="#08090b" fill-opacity=".86" stroke="#d5e7ef" stroke-opacity=".13"/>
+        <path d="M177 16V126M16 71H338" stroke="#d5e7ef" stroke-opacity=".11"/>
+        <text x="16" y="29" fill="#575e69" font-size="8">EXACT STORAGE</text>
+        <text x="16" y="53" fill="#f2f3ed" font-size="14">9.1 MB</text>
+        <text x="194" y="29" fill="#575e69" font-size="8">PROBABILISTIC</text>
+        <text x="194" y="53" fill="#f2f3ed" font-size="14">4 KB</text>
+        <text x="16" y="94" fill="#575e69" font-size="8">MEMORY SAVED</text>
+        <text x="16" y="119" fill="#b9f34a" font-size="15">99.96%</text>
+        <text x="194" y="94" fill="#575e69" font-size="8">MODELED ERROR</text>
+        <text x="194" y="119" fill="#c897ff" font-size="15">1.80%</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -13,7 +13,7 @@
 <p align="center">
   <a href="https://darkmatternet.github.io/probably/"><strong>Open the live playground</strong></a>
   ·
-  <a href="#how-it-works">How it works</a>
+  <a href="#how-can-a-few-kilobytes-remember-millions-of-things">How it works</a>
   ·
   <a href="#run-locally">Run locally</a>
 </p>

@@ -17,9 +17,13 @@ jobs:
   quality:
     name: Test and build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Use Node.js 22
         uses: actions/setup-node@v4
@@ -35,13 +39,16 @@ jobs:
       - name: Assemble static site
         run: npm run build
 
+      - name: Run browser interaction QA
+        run: npm run qa:browser
+
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site
 
